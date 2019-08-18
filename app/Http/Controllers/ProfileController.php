@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Language;
 use App\Profile;
 use Illuminate\Http\Request;
 
@@ -24,7 +25,8 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        //
+        $languages = Language::all();
+        return view('profile.create', compact('languages'));
     }
 
     /**
@@ -35,7 +37,7 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**
@@ -68,9 +70,7 @@ class ProfileController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Profile $profile)
-    {
-        //
-    }
+    { }
 
     /**
      * Remove the specified resource from storage.
