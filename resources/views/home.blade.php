@@ -15,6 +15,7 @@
 
             <div class="font-semibold bg-gray-200 text-gray-700 py-3 px-6 mb-0 text-center">
                 Welcome {{'@'. Auth::user()->name}}
+
             </div>
 
             <div class="flex flex-col justify-center items-center w-full p-6">

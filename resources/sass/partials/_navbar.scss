@@ -1,0 +1,30 @@
+.navbar {
+    height: 7rem;
+    box-shadow: 5px 5px 10px #eee;
+    border-bottom: 1px solid $dark;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     color:$primary;
+    &__logo {
+        margin: 4rem;
+        a {
+            font-size: 2rem;
+            color:$primary;
+          }
+    }
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li {
+            margin: 2rem;
+            font-size: 1.8rem;
+        }
+    }
+    &__item {
+        a {
+            color: $primary;
+        }
+    }
+}

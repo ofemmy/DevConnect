@@ -14,13 +14,16 @@ import FormSubmit from "./FormSubmit";
 export default {
   props: ["language_list"],
   data() {
-    return {};
+    return {
+      field: {}
+    };
   },
   components: {
     "app-input": FormInput,
     "app-select": SelectWidget,
     "app-submit": FormSubmit
   },
+  methods: {},
   created() {
     console.log(this.language_list);
   }

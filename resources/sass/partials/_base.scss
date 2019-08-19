@@ -1,0 +1,26 @@
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 62.5%;
+}
+body {
+    font-family: "Lato", sans-serif;
+    font-size: inherit;
+    line-height: 1.7;
+    box-sizing: border-box;
+    background: $white-off;
+    // background: #F5F5F5;
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}

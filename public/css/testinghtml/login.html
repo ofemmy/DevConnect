@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Log In</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./login.css" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <h2>DevConnect</h2>
+            </div>
+            <ul class="navbar__links">
+                <li><a href="">Home</a></li>
+                <li><a href="">About Me</a></li>
+                <li><a href="">Profile</a></li>
+            </ul>
+            <div class="navbar__actions">
+                <span>Tom Hanks</span>
+                <a href="">Logout</a>
+                <form action=""></form>
+            </div>
+        </nav>
+        <div class="card">
+            <h1 class="card__header">Register</h1>
+            <form action="" class="card__form" autocomplete="off">
+                <div class="card__formitem">
+                    <i class="material-icons">
+                        account_circle
+                    </i>
+                    <input type="text" placeholder="Full Name" />
+                </div>
+                <div class="error-div">
+                    <p class="error">There is an error here</p>
+                </div>
+                <div class="card__formitem">
+                    <i class="material-icons">
+                        email
+                    </i>
+                    <input type="email" placeholder="E-Mail Address" />
+                </div>
+                <div class="card__formitem">
+                    <i class="material-icons">
+                        lock
+                    </i>
+                    <input type="password" placeholder="Password" />
+                </div>
+                <div class="card__formitem">
+                    <i class="material-icons">
+                        lock
+                    </i>
+                    <input type="password" placeholder=" Confirm Password" />
+                </div>
+                <div class="card__formaction">
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+            <div class="card__formaction--login">
+                <a href="#" class="card__formaction--text"
+                    >Already have an account?<span
+                        class="card__formaction--link"
+                        >Login</span
+                    ></a
+                >
+            </div>
+        </div>
+    </body>
+</html>

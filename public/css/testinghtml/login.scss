@@ -1,0 +1,167 @@
+$dark: rgba(0, 0, 0, 0.3);
+$darker: #2d3436;
+$primary: #182848;
+$secondary: #55efc4;
+$gray: #eee;
+
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 62.5%;
+}
+body {
+    font-family: "Lato", sans-serif;
+    font-size: inherit;
+    line-height: 1.7;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.card {
+    height: 55rem;
+    width: 45rem;
+    background-color: #fff;
+    box-shadow: 5px 5px 50px $dark;
+    border-radius: 0.3rem;
+    margin: 10rem auto;
+    overflow: hidden;
+}
+
+.card__header {
+    text-align: center;
+    color: $primary;
+    padding: 2rem;
+}
+.card__form {
+    // display: flex;
+
+    // height: 70%;
+    // flex-direction: column;
+    // justify-content: space-around;
+    // align-items: center;
+}
+.card__formitem {
+    width: 90%;
+    margin: 1.5rem auto;
+    border-bottom: 1.4px solid $darker;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    transition: all 0.3s ease-in;
+    &:focus-within {
+        border-bottom: 1.4px solid $secondary;
+        .material-icons {
+            color: $secondary;
+        }
+    }
+    input {
+        width: 90%;
+        padding: 1.5rem;
+        border: none;
+        outline: none;
+        background: inherit;
+        font-size: 1.5rem;
+    }
+    .material-icons {
+        color: $darker;
+        align-self: center;
+        transition: all 0.3s ease-in;
+    }
+}
+.error-div {
+    width: 90%;
+    margin: 1.5rem auto;
+    .error {
+        color: red;
+        font-size: 1.5rem;
+    }
+}
+.card__formaction {
+    width: 90%;
+    margin: 3rem auto;
+    button {
+        width: 100%;
+        padding: 1.3rem;
+        border-radius: 0.3rem;
+        color: $primary;
+        background: $secondary;
+        font-size: 2rem;
+        letter-spacing: 2px;
+        outline: none;
+        box-shadow: 1px 2px 5px $dark;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in;
+        cursor: pointer;
+        &:hover {
+            background-color: darken($color: $secondary, $amount: 10%);
+            outline: none;
+        }
+        &:active {
+            box-shadow: none;
+            transform: translateY(1px);
+        }
+    }
+    &--login {
+        width: 90%;
+        margin: 1.5rem auto 0.8 auto;
+        text-align: center;
+        a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+    }
+    &--text {
+        color: black;
+    }
+    &--link {
+        color: #3742fa;
+        margin-left: 3px;
+    }
+}
+
+// NAVBAR
+
+.navbar {
+    height: 90px;
+    box-shadow: 5px 5px 10px #eee;
+    border-bottom: 1px solid $dark;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+        margin: 4rem;
+        a {
+            font-size: 2rem;
+            color: black;
+        }
+    }
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid black;
+        li {
+            margin: 2rem;
+            font-size: 1.8rem;
+        }
+    }
+    &__item {
+        a {
+            color: orangered;
+        }
+    }
+}

@@ -1,0 +1,205 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: inherit;
+  line-height: 1.7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.card {
+  height: 55rem;
+  width: 45rem;
+  background-color: #fff;
+  -webkit-box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.3);
+  border-radius: 0.3rem;
+  margin: 10rem auto;
+  overflow: hidden;
+}
+
+.card__header {
+  text-align: center;
+  color: #182848;
+  padding: 2rem;
+}
+
+.card__formitem {
+  width: 90%;
+  margin: 1.5rem auto;
+  border-bottom: 1.4px solid #2d3436;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.card__formitem:focus-within {
+  border-bottom: 1.4px solid #55efc4;
+}
+
+.card__formitem:focus-within .material-icons {
+  color: #55efc4;
+}
+
+.card__formitem input {
+  width: 90%;
+  padding: 1.5rem;
+  border: none;
+  outline: none;
+  background: inherit;
+  font-size: 1.5rem;
+}
+
+.card__formitem .material-icons {
+  color: #2d3436;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.error-div {
+  width: 90%;
+  margin: 1.5rem auto;
+}
+
+.error-div .error {
+  color: red;
+  font-size: 1.5rem;
+}
+
+.card__formaction {
+  width: 90%;
+  margin: 3rem auto;
+}
+
+.card__formaction button {
+  width: 100%;
+  padding: 1.3rem;
+  border-radius: 0.3rem;
+  color: #182848;
+  background: #55efc4;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  outline: none;
+  -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+.card__formaction button:hover {
+  background-color: #26ebb4;
+  outline: none;
+}
+
+.card__formaction button:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+.card__formaction--login {
+  width: 90%;
+  margin: 1.5rem auto 0.8 auto;
+  text-align: center;
+}
+
+.card__formaction--login a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.card__formaction--text {
+  color: black;
+}
+
+.card__formaction--link {
+  color: #3742fa;
+  margin-left: 3px;
+}
+
+.navbar {
+  height: 90px;
+  -webkit-box-shadow: 5px 5px 10px #eee;
+          box-shadow: 5px 5px 10px #eee;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar__logo {
+  margin: 4rem;
+}
+
+.navbar__logo a {
+  font-size: 2rem;
+  color: black;
+}
+
+.navbar__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid black;
+}
+
+.navbar__links li {
+  margin: 2rem;
+  font-size: 1.8rem;
+}
+
+.navbar__item a {
+  color: orangered;
+}
+/*# sourceMappingURL=login.css.map */
