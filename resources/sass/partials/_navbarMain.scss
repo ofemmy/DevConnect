@@ -1,53 +1,55 @@
 .navbar {
-    // height: 7rem;
-   
-    box-shadow:0 4px 4px 2px rgba(61,63,65,.2);
-    border-bottom: 1px solid $dark;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-     color:$primary;
-    &__logo {
-        margin: 4rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow:0 4px 4px 2px rgba(61,63,65,.2);
+border-bottom: 1px solid $dark;
+color:$primary;
+ }
+ .navbar__logo {
+     margin:0 20px;
         a {
-            font-size: 2rem;
+            font-size: 3rem;
             color:$primary;
           }
     }
-    &__links {
-        display: flex;
-        align-items: stretch;
-        justify-content: space-between;
-        height:inherit;
-        li {
-            margin: 0 2rem;
-            font-size: 1.8rem;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-        }
+  .navbar__logo,
+  .navbar__links {
+    height: 100%;
+    //  border: 1px solid black;
+  }   
+
+
+.navbar__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem;
+    .navbar__item {
+    font-size: 1.8rem;
+      padding: 30px;
+      text-decoration: none;
+      color:$primary;
+      transition:all 0.2s ease-in;
+      &:hover {
+        background-color: $secondary;
+      }
     }
-    &__item {
-        a {
-            padding:18px;
-            color: $primary;
-            &:hover {
-                background-color:$secondary;
-            }
-        }
-    }
-}
-.username {
+  }
+  .username {
     position:relative;
-    a {
-        color:inherit;
-        display:flex;
+    font-size:1.8rem;
+    display:flex;
         justify-content:center;
         align-items:center;
+    a {
+        color:inherit;
+
     }
     &:hover {
         .dropdown {
           opacity: 1;
+          cursor:pointer;
         }
       }
     .dropdown {
@@ -59,7 +61,7 @@
     transform: translate(0, -10px);
     opacity: 0;
     cursor: none;
-    margin-top: 60px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,21 +70,19 @@
     width: 150px;
     padding: 5px 0;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-    li {
-        width:100%;
-        margin:0;
-        width:100%;
-        height:100%;
+    // text-align:center;
+       
         a {
+             height:100%;
             padding:7px;
             width:100%;
             transition:all 0.3s ease;
               &:hover {
-          background-color: $secondary;
+          color: orangered;
         }
             
         }
-    }
+    
     &:after {
       content: "";
       width: 0px;
@@ -97,3 +97,13 @@
     }
     }
 }
+.material-icons {
+    cursor:pointer;
+}
+.dropdown .logout {
+        height:100%;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        
+    }

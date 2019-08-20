@@ -28,38 +28,10 @@ ul {
   list-style: none;
 }
 
-.navbar {
-  height: 7rem;
-  box-shadow: 5px 5px 10px #eee;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #182848;
-}
-
-.navbar__logo {
-  margin: 4rem;
-}
-
-.navbar__logo a {
-  font-size: 2rem;
-  color: #182848;
-}
-
-.navbar__links {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navbar__links li {
-  margin: 2rem;
-  font-size: 1.8rem;
-}
-
-.navbar__item a {
-  color: #182848;
+.container {
+  width: 80%;
+  margin: auto;
+  border: 1px solid black;
 }
 
 .card {
@@ -203,5 +175,119 @@ ul {
 
 .forgot__password a {
   font-size: 1.4rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 4px 2px rgba(61, 63, 65, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  color: #182848;
+}
+
+.navbar__logo {
+  margin: 0 20px;
+}
+
+.navbar__logo a {
+  font-size: 3rem;
+  color: #182848;
+}
+
+.navbar__logo,
+.navbar__links {
+  height: 100%;
+}
+
+.navbar__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+.navbar__links .navbar__item {
+  font-size: 1.8rem;
+  padding: 30px;
+  text-decoration: none;
+  color: #182848;
+  transition: all 0.2s ease-in;
+}
+
+.navbar__links .navbar__item:hover {
+  background-color: #55efc4;
+}
+
+.username {
+  position: relative;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.username a {
+  color: inherit;
+}
+
+.username:hover .dropdown {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.username .dropdown {
+  border-radius: 3px;
+  position: absolute;
+  top: 0px;
+  left: 20%;
+  transition: all 0.4s ease;
+  transform: translate(0, -10px);
+  opacity: 0;
+  cursor: none;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 150px;
+  padding: 5px 0;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.username .dropdown a {
+  height: 100%;
+  padding: 7px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.username .dropdown a:hover {
+  color: orangered;
+}
+
+.username .dropdown:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  border-right: 10px solid transparent;
+  position: absolute;
+  bottom: 100%;
+  right: 5%;
+}
+
+.material-icons {
+  cursor: pointer;
+}
+
+.dropdown .logout {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
