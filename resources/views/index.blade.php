@@ -39,6 +39,9 @@
 
 </section>
 <section class="news">
+    @foreach ($following as $followings )
+    <h2>{{$followings->name}}</h2>
+    @endforeach
     NEWS
 </section>
 <section class="side-nav">

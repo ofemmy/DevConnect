@@ -67,6 +67,7 @@ main {
   grid-row: 1/span 1;
   background-color: #fff;
   background: #f7fcfe;
+  overflow: auto;
 }
 
 .side-nav {
@@ -85,6 +86,11 @@ main {
   grid-row: 2/span 1;
   overflow: auto;
   background-color: #fff;
+}
+
+.card {
+  grid-column: 2/span 1;
+  grid-row: 2/span 1;
 }
 
 .side-nav ul {

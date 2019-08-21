@@ -1957,8 +1957,8 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     sendRequest: function sendRequest(e, name) {
       var request_data = {
-        requester: this.user.id,
-        requestee: name
+        user: this.user.id,
+        user_to_be_followed: name
       };
       axios.post("/test", request_data).then(function (response) {
         return console.log(response.data);

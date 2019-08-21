@@ -21,8 +21,6 @@
 <body class="bg-gray-100 h-screen antialiased leading-none">
     @include('includes.navbar')
     <main id="app">
-
-
         @yield('content')
     </main>
 

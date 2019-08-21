@@ -88,13 +88,15 @@ class ProfileController extends Controller
     public function test(Request $request)
 
     {
-        $requestee_data = User::where('name', $request->requestee)->first();
-        Relationship::create(
-            [
-                'follower_user' => Auth::user()->id,
-                'followed_user' => $requestee_data->id
-            ]
-        );
+        $follower = Auth::user();
+        $to_be_followed =  User::where('name', $request->user_to_be_followed)->first();
+        // $to_be_followed = $to_be_followed->id;
+        // // $requestee_data = User::where('name', $request->requestee)->first();
+        $follower->follows()->attach($to_be_followed);
+        // // return ('done');
+        // $response = ['user' => $follower, 'to_be_followed' => $to_be_followed];
+        // return ($response);
+        // User::find(1)->followings()->attach(User::find(5));
         return ('done');
     }
 }

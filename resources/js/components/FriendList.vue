@@ -24,8 +24,8 @@ export default {
   methods: {
     sendRequest(e, name) {
       const request_data = {
-        requester: this.user.id,
-        requestee: name
+        user: this.user.id,
+        user_to_be_followed: name
       };
       axios
         .post("/test", request_data)

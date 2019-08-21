@@ -25,8 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        
+
         $userlist = User::all();
-        return view('index', compact('userlist'));
+        $following = Auth::user()->follows;
+        return view('index', compact('userlist', 'following'));
     }
 }
