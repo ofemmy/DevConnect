@@ -481,7 +481,16 @@ main {
   font-size: 20px;
 }
 
-.friend-list-item {
+.friend-list {
+  padding: 10px;
+}
+
+.friend-list h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.friend-list .friend-list-item {
   border-bottom: 1px solid #edeeef;
   padding: 20px 30px;
   font-size: 1.5rem;
@@ -492,11 +501,17 @@ main {
   width: 100%;
 }
 
-.friend-list-item .follow {
+.friend-list .friend-list-item .follow {
   background: #edeeef;
   padding: 5px 10px;
   border-radius: 5px;
   color: #182848;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.friend-list .friend-list-item .follow:hover {
+  background: #686f75;
 }
 
 .news {

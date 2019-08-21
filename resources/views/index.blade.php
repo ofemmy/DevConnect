@@ -53,13 +53,15 @@
     MAIN SECTION
 </section>
 <section class="friend-list">
-    @foreach ($userlist as $user)
+    <h3>People you may know</h3>
+    <app-friends :friends="{{$userlist}}"></app-friends>
+    {{-- @foreach ($userlist as $user)
     <div class="friend-list-item">
         <p>{{$user->name}}</p>
-        <p>Javascript Developer</p>
-        <a href="" class="follow">Follow</a>
+    <p>Javascript Developer</p>
+    <a href="" class="follow">Follow</a>
     </div>
-    @endforeach
+    @endforeach --}}
 </section>
 
 @endsection

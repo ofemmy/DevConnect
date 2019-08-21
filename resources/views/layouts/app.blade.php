@@ -20,11 +20,11 @@
 
 <body class="bg-gray-100 h-screen antialiased leading-none">
     @include('includes.navbar')
-<main>
+    <main id="app">
 
 
-    @yield('content')
-</main>
+        @yield('content')
+    </main>
 
 
     <!-- Scripts -->
