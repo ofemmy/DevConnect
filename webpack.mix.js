@@ -1,7 +1,6 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
-require('laravel-mix-tailwind');
-require('laravel-mix-purgecss');
+
 
 /*
  |--------------------------------------------------------------------------
@@ -14,14 +13,20 @@ require('laravel-mix-purgecss');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-   .postCss('resources/css/app.css', 'public/css')
-   .tailwind('./tailwind.config.js');
+mix.js("resources/js/app.js", "public/js")
+    .sass("resources/sass/main.scss", "public/css/app.css")
+    .options({
+        postCss: [
+            require('autoprefixer')
+        ]
+    });
 
 if (mix.inProduction()) {
-  mix
-   .version()
-   .purgeCss()
-   .version();
+    mix.version()
+        .purgeCss()
+        .version();
 }
-
+// mix.styles([
+//     'public/css/vendor/normalize.css',
+//     'public/css/vendor/videojs.css'
+// ], 'public/css/all.css');

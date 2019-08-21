@@ -1,0 +1,100 @@
+html,
+body {
+    min-height: 100%;
+    width: 100%;
+    font-size: 62.5%;
+    background: #f7fcfe;
+    // background: rgb(0, 0, 0, 0.7);
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Lato", sans-serif;
+    font-size: inherit;
+    line-height: 1.7;
+    box-sizing: border-box;
+    // background: rgb(0, 0, 0);
+    // background: url("../img/bck.jpg");
+    background: #fff; //consider changing
+    // background: linear-gradient(
+    //      rgba(138, 91, 91, 0.6),
+    //      rgba(0, 0, 0, 0.3)
+    //    ),
+    //    url('../img/bck.jpg');
+    background-size: cover;
+    background-position: center;
+
+    // background: #F5F5F5;
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    border: 1px solid black;
+}
+main {
+    // padding:30px;
+    min-height: 100vh;
+    background: #fff;
+    // background: #f7fcfe;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 200px 1000px;
+    grid-auto-rows: auto;
+    // border: 1px solid black;
+    position: relative;
+    // grid-gap: 5px;
+}
+.intro-section {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    // border: 1px solid black;
+    background-color: #fff;
+    background: #f7fcfe;
+}
+.hero {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    // border: 1px solid black;
+    background: #fff;
+}
+.news {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    // border: 1px solid black;
+    background-color: #fff;
+    background: #f7fcfe;
+}
+.side-nav {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    // border: 1px solid black;
+    background-color: #fff;
+}
+.main-section {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    // border: 1px solid black;
+}
+.friend-list {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+    // border: 1px solid black;
+    overflow: auto;
+    background-color: #fff;
+}
+// #main section {
+//     border: 1px solid black;
+// }

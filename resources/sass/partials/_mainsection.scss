@@ -1,0 +1,61 @@
+#main {
+    height: 100%;
+    // border: 1px solid black;
+    .hero {
+        width: 100%;
+        // min-height: 30%;
+        // border: 1px solid orangered;
+        // background: url("../img/profile_background.jpg");
+        background: #657685;
+        background: #f7fcfe;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        // box-shadow: 0 0px 4px 2px rgba(61, 63, 65, 0.2);
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 1.5rem;
+            width: 70%;
+            p {
+                color: $primary;
+                font-size: 1.9rem;
+            }
+        }
+    }
+    .main_stats {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        background: #fff;
+        // border-radius: 4px;
+
+        a {
+            font-size: 1.5rem;
+            border-bottom: 3px solid rgba(0, 0, 0, 0);
+            transition: all 0.3s ease-in;
+            padding: 0 10px;
+            &:hover {
+                border-bottom: 3px solid rgba(0, 0, 0, 1);
+
+                span {
+                    color: $primary;
+                }
+            }
+            span {
+                display: block;
+                text-align: center;
+                font-weight: 700;
+                color: $primary;
+            }
+        }
+    }
+}

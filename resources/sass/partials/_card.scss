@@ -1,0 +1,127 @@
+.card {
+    // height: 55rem;
+    width: 45rem;
+    background-color: #fff;
+    box-shadow: 5px 5px 50px $dark;
+    border-radius: 0.5rem;
+    margin: 3rem 15rem;
+    overflow: hidden;
+    padding:3rem 1.5rem;
+}
+
+.card__header {
+    text-align: center;
+    color: $primary;
+    // padding: 2rem;
+}
+.card__form {
+
+}
+.card__formitem {
+    width: 90%;
+    margin: 1.5rem auto;
+    border-bottom: 1.4px solid $darker;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: all 0.3s ease-in;
+    &:focus-within {
+        border-bottom: 1.4px solid $secondary;
+        .material-icons {
+            color: $secondary;
+        }
+    }
+    &.is-invalid {
+        border-bottom: 1.4px solid $error;
+        .material-icons {
+            color: $error;
+        }
+    }
+    input {
+        width: 90%;
+        padding: 1.5rem;
+        border: none;
+        outline: none;
+        background: inherit;
+        font-size: 1.5rem;
+    }
+    .material-icons {
+        color: $darker;
+        align-self: center;
+        transition: all 0.3s ease-in;
+    }
+}
+.error-div {
+    width: 90%;
+    margin: 1.5rem auto;
+    .error {
+        color: red;
+        font-size: 1.5rem;
+    }
+}
+.card__formaction {
+    width: 90%;
+    margin: 3rem auto;
+    button {
+        width: 100%;
+        padding: 1.3rem;
+        border-radius: 0.3rem;
+        color: $primary;
+        background: $secondary;
+        font-size: 2rem;
+        letter-spacing: 2px;
+        outline: none;
+        box-shadow: 1px 2px 5px $dark;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in;
+        cursor: pointer;
+        &:hover {
+            background-color: darken($color: $secondary, $amount: 10%);
+            outline: none;
+        }
+        &:active {
+            box-shadow: none;
+            transform: translateY(1px);
+        }
+    }
+    &--login {
+        width: 90%;
+        margin: 1.5rem auto 0.8 auto;
+        text-align: center;
+        a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+    }
+    &--text {
+        color: black;
+    }
+    &--link {
+        color: $secondary;
+        margin-left: 3px;
+    }
+}
+.card__formitem--checkbox {
+    width: 90%;
+    margin: 3rem auto;
+    display:flex;
+    align-items:center;
+    input {
+        margin-right: 2rem;
+    }
+    p {
+        font-size:1.5rem;
+    }
+
+}
+.forgot__password {
+     width: 90%;
+    margin: 1.2rem auto;
+    text-align:center;
+    a {
+        font-size:1.4rem;
+    }
+
+}

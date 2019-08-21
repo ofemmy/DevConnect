@@ -14,7 +14,8 @@
         <div class="flex flex-col break-words bg-white border border-2 rounded shadow-md">
 
             <div class="font-semibold bg-gray-200 text-gray-700 py-3 px-6 mb-0 text-center">
-                Welcome {{'@'. Auth::user()->username}}
+                Welcome {{'@'. Auth::user()->name}}
+
             </div>
 
             <div class="flex flex-col justify-center items-center w-full p-6">
@@ -25,7 +26,8 @@
 
 
 
-                <a href="/profile" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create
+                <a href="{{route('profile.create')}}"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create
                     Your
                     Profile</a>
 

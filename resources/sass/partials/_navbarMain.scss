@@ -1,0 +1,109 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 4px 2px rgba(61, 63, 65, 0.2);
+    border-bottom: 1px solid $dark;
+    color: $primary;
+    // background-color:rgba(0,0,0,0.7);
+}
+.navbar__logo {
+    margin: 0 20px;
+    // a {
+    //     font-size: 3rem;
+    //     color:#2ed2a4;
+    //   }
+    img {
+        width: 100px;
+    }
+}
+.navbar__links {
+    height: 100%;
+    //  border: 1px solid black;
+}
+
+.navbar__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem;
+    .navbar__item {
+        font-size: 1.8rem;
+        padding: 30px;
+        text-decoration: none;
+        color: $primary;
+        transition: all 0.2s ease-in;
+        &:hover {
+            background-color: $secondary;
+        }
+    }
+}
+.username {
+    position: relative;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        color: $primary;
+    }
+    &:hover {
+        .dropdown {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+    .dropdown {
+        border-radius: 3px;
+        position: absolute;
+        top: 0px;
+        left: 20%;
+        transition: all 0.4s ease;
+        transform: translate(0, -10px);
+        opacity: 0;
+        cursor: none;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        width: 150px;
+        padding: 5px 0;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+        z-index: 555;
+        // text-align:center;
+
+        a {
+            height: 100%;
+            padding: 7px;
+            width: 100%;
+            transition: all 0.3s ease;
+            &:hover {
+                color: orangered;
+            }
+        }
+
+        &:after {
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-top: 10px solid transparent;
+            border-left: 10px solid transparent;
+            border-bottom: 10px solid #fff;
+            border-right: 10px solid transparent;
+            position: absolute;
+            bottom: 100%;
+            right: 5%;
+        }
+    }
+}
+.material-icons {
+    cursor: pointer;
+}
+.dropdown .logout {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
