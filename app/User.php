@@ -43,6 +43,6 @@ class User extends Authenticatable
     }
     public function languages()
     {
-        return $this->belongsToMany(Language::class);
+        return $this->belongsToMany(Language::class)->withTimestamps();
     }
 }

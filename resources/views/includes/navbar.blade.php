@@ -1,11 +1,11 @@
 <nav class="navbar">
     <div class="navbar__logo">
-        
-            <a href="{{ url('/') }}">
-               <img src="/img/logo2.png" alt="">
-            
-            </a>
-       
+
+        <a href="{{ url('/') }}">
+            <img src="/img/logo.png" alt="">
+
+        </a>
+
     </div>
 
     <div class="navbar__links">
@@ -14,19 +14,19 @@
         <a class="navbar__item" href="#">About Me</a>
         <a class="navbar__item" href="#">Profile</a>
         <div class="username">
-        <p> {{ Auth::user()->name }}</p>
-        <i class="material-icons">arrow_drop_down</i>
-       
-        <div class="dropdown">
-        <div class="logout">
-        <a href="{{ route('logout') }}"  onclick="event.preventDefault();
+            <p> {{ Auth::user()->name }}</p>
+            <i class="material-icons">arrow_drop_down</i>
+
+            <div class="dropdown">
+                <div class="logout">
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">{{ __('Logout') }}
-        </a>
-         <i class="material-icons" style="color:orangered">exit_to_app</i> 
+                    </a>
+                    <i class="material-icons" style="color:orangered">exit_to_app</i>
+                </div>
+
+            </div>
         </div>
-        
-        </div>
-       </div>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="navbar__actions-hidden">
             {{ csrf_field() }}
         </form>

@@ -25,6 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        
         $userlist = User::all();
         return view('index', compact('userlist'));
     }

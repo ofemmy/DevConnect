@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Request;
+
 Route::get('/', function () {
     return view('index');
 });
@@ -18,3 +20,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('profile', 'ProfileController');
+Route::post('/test', 'ProfileController@test');

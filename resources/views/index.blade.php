@@ -53,8 +53,9 @@
     MAIN SECTION
 </section>
 <section class="friend-list">
+    {{-- {{Auth::user()->name}} --}}
     <h3>People you may know</h3>
-    <app-friends :friends="{{$userlist}}"></app-friends>
+    <app-friends :friends="{{$userlist}}" :user="{{Auth::user()}}"></app-friends>
     {{-- @foreach ($userlist as $user)
     <div class="friend-list-item">
         <p>{{$user->name}}</p>

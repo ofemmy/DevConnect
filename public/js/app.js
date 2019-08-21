@@ -1943,16 +1943,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ["friends"],
+  props: ["friends", "user"],
   data: function data() {
-    return {};
+    return {
+      myData: {
+        name: "Oladayo",
+        job: "Developer"
+      }
+    };
   },
   methods: {
     sendRequest: function sendRequest(e, name) {
+      var request_data = {
+        requester: this.user.id,
+        requestee: name
+      };
+      axios.post("/test", request_data).then(function (response) {
+        return console.log(response.data);
+      })["catch"](function (e) {
+        return console.log(e);
+      });
       console.log("Request sent to ".concat(name));
     }
-  }
+  } //   created() {
+  //     console.log(this.user);
+  //   }
+
 });
 
 /***/ }),
@@ -19785,28 +19803,31 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    _vm._l(_vm.friends, function(friend) {
-      return _c("div", { key: friend.id, staticClass: "friend-list-item" }, [
-        _c("p", [_vm._v(_vm._s(friend.name))]),
-        _vm._v(" "),
-        _c("p", [_vm._v("Javascript Developer from Vue")]),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "follow",
-            on: {
-              click: function($event) {
-                $event.preventDefault()
-                return _vm.sendRequest($event, friend.name)
+    [
+      _vm._v("\n  " + _vm._s(_vm.user.name) + "\n  "),
+      _vm._l(_vm.friends, function(friend) {
+        return _c("div", { key: friend.id, staticClass: "friend-list-item" }, [
+          _c("p", [_vm._v(_vm._s(friend.name))]),
+          _vm._v(" "),
+          _c("p", [_vm._v("Javascript Developer from Vue")]),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "follow",
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  return _vm.sendRequest($event, friend.name)
+                }
               }
-            }
-          },
-          [_vm._v("Follow")]
-        )
-      ])
-    }),
-    0
+            },
+            [_vm._v("Follow")]
+          )
+        ])
+      })
+    ],
+    2
   )
 }
 var staticRenderFns = []

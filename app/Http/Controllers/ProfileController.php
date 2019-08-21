@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Language;
 use App\Profile;
+use App\Relationship;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
@@ -81,5 +84,17 @@ class ProfileController extends Controller
     public function destroy(Profile $profile)
     {
         //
+    }
+    public function test(Request $request)
+
+    {
+        $requestee_data = User::where('name', $request->requestee)->first();
+        Relationship::create(
+            [
+                'follower_user' => Auth::user()->id,
+                'followed_user' => $requestee_data->id
+            ]
+        );
+        return ('done');
     }
 }
