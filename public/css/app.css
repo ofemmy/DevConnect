@@ -87,6 +87,29 @@ main {
   background-color: #fff;
 }
 
+.side-nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-nav ul li {
+  height: 100%;
+  width: 100%;
+}
+
+.side-nav ul li a {
+  font-size: 1.8rem;
+  padding: 20px;
+  display: block;
+  transition: all 0.1s ease-in;
+  color: #182848;
+}
+
+.side-nav ul li a:hover {
+  background-color: #f7fcfe;
+  border-left: 5px solid #55efc4;
+}
+
 .card {
   width: 45rem;
   background-color: #fff;
@@ -409,6 +432,7 @@ main {
   flex-direction: column;
   border-bottom: 1px solid #edeeef;
   border-right: 1px solid #edeeef;
+  background: #fff;
   position: relative;
 }
 
@@ -478,5 +502,6 @@ main {
 .news {
   border-left: 1px solid #edeeef;
   border-bottom: 1px solid #edeeef;
+  background-color: #fff;
 }
 

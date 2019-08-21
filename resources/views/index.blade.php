@@ -42,7 +42,12 @@
     NEWS
 </section>
 <section class="side-nav">
-    SIDE NAV
+    <ul>
+        <li><a href="#">New Post</a></li>
+        <li><a href="#">My Networks</a></li>
+        <li><a href="#">Edit Profile</a></li>
+        <li><a href="#">My Posts</a></li>
+    </ul>
 </section>
 <section class="main-section">
     MAIN SECTION
