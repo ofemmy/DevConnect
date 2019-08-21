@@ -1,0 +1,79 @@
+.section-1 {
+    // background: #d1ccc0;
+    padding: 1rem;
+    // box-shadow: 0 4px 4px 2px rgba(61, 63, 65, 0.2);
+    min-height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+#sidebar {
+    // padding: 0.9rem;
+    // border-right: 1px solid $primary;
+    // // background: $offwhite;
+    // background: rgba(0, 0, 0, 0.9);
+    background: #edeeef;
+    background: #f7fcfe;
+    background: #fff;
+    height: 100%;
+    overflow: auto;
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .profile-img-box {
+            width: 80px;
+            height: 80px;
+            border: 1px solid black;
+            margin: auto;
+            border-radius: 50%;
+            img {
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+    }
+    .job-description {
+        text-align: center;
+    }
+    .social-media {
+        width: 100%;
+        margin: 5px auto;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        a {
+            color: $primary;
+            margin-right: 1.5rem;
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+}
+#sidebar .friend-list {
+    border-bottom: 1px solid #edeeef;
+    padding: 20px 30px;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+
+    .follow {
+        background: #edeeef;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: $primary;
+    }
+}

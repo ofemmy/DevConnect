@@ -21,7 +21,8 @@
                 <i class="material-icons">
                     lock
                 </i>
-                <input type="password" placeholder="Password" name="password" />
+                <input type="password" placeholder="Password" name="password" id="pwd"/>
+                <i class="material-icons" id="pwdtoggle"> visibility</i>
             </div>
             @if ($errors->has('password'))
             <div class="error-div">
@@ -46,7 +47,7 @@
         </form>
        
         <div class="card__formaction--login">
-            <a href="#" class="card__formaction--text">Don't have an account?<span
+            <a href="{{route('register')}}" class="card__formaction--text">Don't have an account?<span
                     class="card__formaction--link">Register</span></a>
         </div>
     </div>

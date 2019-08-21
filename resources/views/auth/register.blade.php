@@ -33,7 +33,8 @@
                 <i class="material-icons">
                     lock
                 </i>
-                <input type="password" placeholder="Password" name="password" />
+                <input type="password" placeholder="Password" name="password" id="pwd"/>
+                  <i class="material-icons" id="pwdtoggle"> visibility</i>
             </div>
             @if ($errors->has('password'))
             <div class="error-div">
@@ -46,6 +47,7 @@
                     lock
                 </i>
                 <input type="password" placeholder=" Confirm Password" name="password_confirmation" />
+                {{-- <i class="material-icons" id="pwdtoggle"> visibility</i> --}}
             </div>
             @if ($errors->has('password'))
             <div class="error-div">
@@ -58,7 +60,7 @@
         </form>
         {{-- testing --}}
         <div class="card__formaction--login">
-            <a href="#" class="card__formaction--text">Already have an account?<span
+            <a href="{{route('login')}}" class="card__formaction--text">Already have an account?<span
                     class="card__formaction--link">Login</span></a>
         </div>
     </div>

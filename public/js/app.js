@@ -32003,6 +32003,8 @@ var app = new Vue({
 /***/ (function(module, exports, __webpack_require__) {
 
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+
+__webpack_require__(/*! ./custom.js */ "./resources/js/custom.js")();
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
@@ -32019,6 +32021,7 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
+
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -32324,6 +32327,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SelectWidget_vue_vue_type_template_id_6bfc124b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/custom.js":
+/*!********************************!*\
+  !*** ./resources/js/custom.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function togglePasswordVisibility() {
+  var pwd = document.querySelector("#pwd");
+  var pwdtoggler = document.querySelector("#pwdtoggle");
+  pwdtoggler.addEventListener("click", togglevisible);
+
+  function togglevisible(e) {
+    pwd.type = pwd.type == "password" ? "text" : "password";
+    pwdtoggler.innerText = pwdtoggler.innerText == "visibility" ? "visibility_off" : "visibility";
+  }
+};
 
 /***/ }),
 

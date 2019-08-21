@@ -15,7 +15,7 @@ class UserTableSeeder extends Seeder
 
 
 
-        $user = factory(User::class, 5)->create();
+        $user = factory(User::class, 30)->create();
         // User::insert([
         //     'name' => 'Fagbemi Oladayo',
         //     'password' => 'password',

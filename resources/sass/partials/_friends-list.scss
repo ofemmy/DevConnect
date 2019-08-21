@@ -1,0 +1,17 @@
+.friend-list-item {
+    border-bottom: 1px solid #edeeef;
+    padding: 20px 30px;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+
+    .follow {
+        background: #edeeef;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: $primary;
+    }
+}
